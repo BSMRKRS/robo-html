@@ -1,7 +1,8 @@
 load_message = function(txt){
-  var msg_arr = txt.split('|');
+  var msg_arr = txt.split(',');
   for(var i = 0; i < msg_arr.length; i++){
-    var pair = msg_arr[i].split(',');
+    console.log(msg_arr[i]);
+    var pair = msg_arr[i].split('=');
     var pin_type = msg_arr[i][0];
     if(pin_type == 'm'){
       document.getElementById(pair[0]).innerHTML = 'Motor ' + pair[0] + ': ' + pair[1];
