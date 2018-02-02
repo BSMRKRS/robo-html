@@ -14,7 +14,7 @@ global state
 state = dict()
 #print 'ptw', state, tState
 
-f = open('/home/student/robo-html/readings.txt','r+')
+f = open('readings.txt','r+')
 
 def send(d):
   f.seek(0)
