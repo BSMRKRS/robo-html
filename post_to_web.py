@@ -14,15 +14,16 @@ global state
 state = dict()
 #print 'ptw', state, tState
 
+f = open('/home/student/robo-html/readings.txt','r+')
+
 def send(d):
-  f = open('/home/student/robo-html/readings.txt','w')
+  f.seek(0)
   msg = (',').join(map(lambda reading: str(reading) + '=' + str(d[reading]), d.keys()))
   f.write('let msg = `' + msg+'`;')
-  f.close()
+  f.truncate()
 
 def post(interval = 0.5):
   global tState
   if time.time() - tState > interval:
     send(state)
     tState = time.time()
-
