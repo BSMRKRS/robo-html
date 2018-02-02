@@ -1,17 +1,3 @@
 load_message = function(txt){
-  var msg_arr = txt.split(',');
-  for(var i = 0; i < msg_arr.length; i++){
-    console.log(msg_arr[i]);
-    var pair = msg_arr[i].split('=');
-    var pin_type = msg_arr[i][0];
-    if(pin_type == 'm'){
-      document.getElementById(pair[0]).innerHTML = 'Motor ' + pair[0] + ': ' + pair[1];
-    } else if (pin_type == 'd'){
-      document.getElementById(pair[0]).innerHTML = 'Digital ' + pair[0] + ': ' + pair[1];
-    } else if (pin_type == 'a'){
-      document.getElementById(pair[0]).innerHTML = 'Analog ' + pair[0] + ': ' + pair[1];
-    } else {
-      document.getElementById(pair[0]).innerHTML = msg_arr[i];
-    }
-  }
+  document.getElementById('text').innerHTML = txt;
 }
