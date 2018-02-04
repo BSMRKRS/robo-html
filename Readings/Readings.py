@@ -59,7 +59,7 @@ def sensorMsg():
 
 f = open('readings.txt','r+')
 
-def writeReadings(text):
+def writeReadings(text, f):
   f.seek(0)
   f.write('let msg = `' + str(text)+'`;')
   f.truncate()
@@ -67,7 +67,7 @@ def writeReadings(text):
 ui()
 while True:
 
-    f = motorMsg() + ("<br />"*2) + sensorMsg()
+    msg = motorMsg() + ("<br />"*2) + sensorMsg()
 
     #Write to readings.txt temp file
-    writeReadings(f)
+    writeReadings(msg, f)
