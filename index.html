@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>RoboPi</title>
-<meta http-equiv='refresh' content='0.5' />
+<title>RoboPi Welcome</title>
 <style>
     body {
         width: 50em;
         margin: 0 auto;
         font-family: Tahoma, Verdana, Arial, sans-serif;
     }
-</style>
-</head>
-<body onload='load_message(msg);'>
-<h1>RoboPi Readings</h1>
 
-<p id='text'></p>
+
+</style>
+
+ <h1>Welcome to Robo-HTML</h1>
+
+<form target="_blank" action="Readings/index.html">
+    <input type="submit" value="Robo Readings" />
+</form>
+
+<form target="_blank" action=":8080">
+    <input type="submit" value="View Camera" />
+</form>
+
+<form target="_blank" action="https://github.com/orgs/BSMRKRS/dashboard">
+    <input type="submit" value="GitHub" />
+</form>
+
+<form target="_blank" action="Assignments.html">
+    <input type="submit" value="Assignments" />
+</form>
+
+<form target="_blank" action="https://github.com/BSMRKRS/robo-html/tree/voss">
+    <input type="submit" value="Troubleshooting" />
+</form>
+
+<h2>How to use:</h2>
+<h3>Robo Readings:</h3>
+<p>- Run Readings.py in /robo-html/Readings/ <br /><br />
+Example: $ cd ~/robo-html/Readings && python Readings.py</p>
+<h3>View Camera:</h3>
+<p>- Run start_camera in home directory<br /><br />
+Example: $ /home/student/start_camera.sh</p>
 
 </body>
 </html>
-
-<script src='readings.txt'></script>
-<script src='load_message.js'></script>
