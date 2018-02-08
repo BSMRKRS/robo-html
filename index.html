@@ -12,15 +12,18 @@
 
 </style>
 
- <h1>Welcome to Robo-HTML</h1>
+<h1>Welcome to Robo-HTML</h1>
 
-<form target="_blank" action="Readings/index.html">
-    <input type="submit" value="Robo Readings" />
-</form>
+<script>
+function setHref() {
+document.getElementById('modify-me').href = window.location.protocol + "//" + window.location.hostname + ":8080";
+}
+</script>
+</head>
 
-<form target="_blank" action=":8080">
-    <input type="submit" value="View Camera" />
-</form>
+<body onload="setHref()">
+<a href=":8080" id="modify-me"><button>View Camera</button></a>
+</body>
 
 <form target="_blank" action="https://github.com/orgs/BSMRKRS/dashboard">
     <input type="submit" value="GitHub" />
