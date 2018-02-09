@@ -15,3 +15,16 @@ load_message = function(txt){
     }
   }
 }
+
+async_message = function(){
+  delete msg;
+  var readings_script = document.getElementById('readings');
+  var readings_script_parent = readings_script.parentNode;
+  readings_script_parent.removeChild(readings_script);
+  var script = document.createElement('script');
+  script.src = 'readings.js';
+  script.id = 'readings';
+  readings_script_parent.appendChild(script);
+  load_message(msg);
+  setTimeout(function(){async_message()}, 50);
+}
