@@ -24,5 +24,5 @@ def post(interval = 0.5):
   global tState
   if time.time() - tState > interval:
     send(state)
+    time.sleep(0.3)
     tState = time.time()
-
